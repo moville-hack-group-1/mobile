@@ -19,20 +19,22 @@ class ListItemComponent extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                TitleComponent(title),
-                Padding(
-                  padding: const EdgeInsets.only(top: 16.0),
-                  child: Text(
-                    subtitle,
-                    style: TextStyle(
-                      fontSize: 14.0,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  TitleComponent(title),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 16.0),
+                    child: Text(
+                      subtitle,
+                      style: TextStyle(
+                        fontSize: 14.0,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Image.asset('images/ic_arrow.png')
           ],

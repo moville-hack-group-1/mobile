@@ -28,7 +28,7 @@ class Welcome extends StatelessWidget {
               height: 48.0,
               width: double.maxFinite,
               child: RaisedButton(
-                child: Text('COMEÇAR'),
+                child: Text('COMECAR'),
                 onPressed: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => Level()));

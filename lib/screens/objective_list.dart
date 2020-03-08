@@ -1,8 +1,9 @@
 import 'package:educanacao/components/list_item.dart';
 import 'package:educanacao/components/title.dart';
+import 'package:educanacao/screens/selected_objective_info.dart';
 import 'package:flutter/material.dart';
 
-class Objective extends StatelessWidget {
+class ObjectiveList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,19 +23,25 @@ class Objective extends StatelessWidget {
                 ListItemComponent(
                   'ENCCEJA',
                   'Exame para jovens e adultos',
-                  onClick: () {},
+                  onClick: () {
+                    openSelectedObjectiveInfo(context);
+                  },
                 ),
                 Divider(),
                 ListItemComponent(
                   'Ensino Geral',
                   'Exame para ingressar nas Universidades',
-                  onClick: () {},
+                  onClick: () {
+                    openSelectedObjectiveInfo(context);
+                  },
                 ),
                 Divider(),
                 ListItemComponent(
                   'ENEM',
                   'Exame para ingressar nas Universidades',
-                  onClick: () {},
+                  onClick: () {
+                    openSelectedObjectiveInfo(context);
+                  },
                 ),
               ],
             ),
@@ -42,5 +49,10 @@ class Objective extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void openSelectedObjectiveInfo(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => SelectedObjectiveInfo()));
   }
 }

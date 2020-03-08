@@ -1,6 +1,6 @@
 import 'package:educanacao/components/list_item.dart';
 import 'package:educanacao/components/title.dart';
-import 'package:educanacao/screens/objective.dart';
+import 'package:educanacao/screens/objective_list.dart';
 import 'package:flutter/material.dart';
 
 class Level extends StatelessWidget {
@@ -25,7 +25,7 @@ class Level extends StatelessWidget {
                   '6 ao 9 ano',
                   onClick: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Objective()));
+                        MaterialPageRoute(builder: (context) => ObjectiveList()));
                   },
                 ),
                 Divider(),
@@ -34,7 +34,7 @@ class Level extends StatelessWidget {
                   '1 ao 3 ano',
                   onClick: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Objective()));
+                        MaterialPageRoute(builder: (context) => ObjectiveList()));
                   },
                 ),
               ],
