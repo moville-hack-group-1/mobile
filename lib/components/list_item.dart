@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 class ListItemComponent extends StatelessWidget {
   final String title;
   final String subtitle;
+  final double titleSize;
   final Function onClick;
 
-  ListItemComponent(this.title, {this.subtitle, @required this.onClick});
+  ListItemComponent(this.title,
+      {this.subtitle, this.titleSize, @required this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class ListItemComponent extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  TitleComponent(title),
+                  TitleComponent(title, size: titleSize),
                   Padding(
                     padding: const EdgeInsets.only(top: 16.0),
                     child: subtitle != null
