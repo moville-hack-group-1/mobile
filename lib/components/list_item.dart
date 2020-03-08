@@ -12,7 +12,7 @@ class ListItemComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        print('Clicou no item $title');
+        onClick();
       },
       child: Padding(
         padding: const EdgeInsets.all(24.0),
