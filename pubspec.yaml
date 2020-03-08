@@ -48,6 +48,9 @@ flutter:
 
   assets:
     - images/ic_arrow.png
+    - images/logo.png
+    - images/loading.gif
+    - images/background.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
