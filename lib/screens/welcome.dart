@@ -1,3 +1,5 @@
+import 'package:educanacao/components/title.dart';
+import 'package:educanacao/screens/level.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
@@ -10,13 +12,7 @@ class Welcome extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(children: <Widget>[
-          Text(
-            'Oi Maria!\nEstamos felizes em te ver por aqui!',
-            style: TextStyle(
-              fontSize: 24.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          TitleComponent('Oi Maria!\nEstamos felizes em te ver por aqui!'),
           Padding(
             padding: const EdgeInsets.only(top: 32.0),
             child: Text(
@@ -34,7 +30,8 @@ class Welcome extends StatelessWidget {
               child: RaisedButton(
                 child: Text('COMEÇAR'),
                 onPressed: () {
-
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Level()));
                 },
               ),
             ),
