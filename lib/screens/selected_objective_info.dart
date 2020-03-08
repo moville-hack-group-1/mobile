@@ -39,7 +39,7 @@ class SelectedObjectiveInfo extends StatelessWidget {
               children: <Widget>[
                 ListItemComponent(
                   'Declaração Parcial de Proficiência',
-                  'Para o participante que conseguir a nota mínima exigida em uma das quatro provas, ou em mais de uma, mas não em todas elas.',
+                  subtitle: 'Para o participante que conseguir a nota mínima exigida em uma das quatro provas, ou em mais de uma, mas não em todas elas.',
                   onClick: () {
                     openSpecificList(context);
                   },
@@ -47,7 +47,7 @@ class SelectedObjectiveInfo extends StatelessWidget {
                 Divider(),
                 ListItemComponent(
                   'Certificação de Conclusão',
-                  'Para o participante que conseguir a nota mínima exigida nas quatro provas objetivas e na redação.',
+                  subtitle: 'Para o participante que conseguir a nota mínima exigida nas quatro provas objetivas e na redação.',
                   onClick: () {
                     openSpecificList(context);
                   },

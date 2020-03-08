@@ -22,7 +22,7 @@ class ObjectiveList extends StatelessWidget {
               children: <Widget>[
                 ListItemComponent(
                   'ENCCEJA',
-                  'Exame para jovens e adultos',
+                  subtitle: 'Exame para jovens e adultos',
                   onClick: () {
                     openSelectedObjectiveInfo(context);
                   },
@@ -30,7 +30,7 @@ class ObjectiveList extends StatelessWidget {
                 Divider(),
                 ListItemComponent(
                   'Ensino Geral',
-                  'Exame para ingressar nas Universidades',
+                  subtitle: 'Exame para ingressar nas Universidades',
                   onClick: () {
                     openSelectedObjectiveInfo(context);
                   },
@@ -38,7 +38,7 @@ class ObjectiveList extends StatelessWidget {
                 Divider(),
                 ListItemComponent(
                   'ENEM',
-                  'Exame para ingressar nas Universidades',
+                  subtitle: 'Exame para ingressar nas Universidades',
                   onClick: () {
                     openSelectedObjectiveInfo(context);
                   },

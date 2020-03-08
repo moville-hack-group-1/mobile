@@ -22,7 +22,7 @@ class Level extends StatelessWidget {
               children: <Widget>[
                 ListItemComponent(
                   'Ensino Fundamental',
-                  '6 ao 9 ano',
+                  subtitle: '6 ao 9 ano',
                   onClick: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ObjectiveList()));
@@ -31,7 +31,7 @@ class Level extends StatelessWidget {
                 Divider(),
                 ListItemComponent(
                   'Ensino Médio',
-                  '1 ao 3 ano',
+                  subtitle: '1 ao 3 ano',
                   onClick: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ObjectiveList()));

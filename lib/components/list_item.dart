@@ -6,7 +6,7 @@ class ListItemComponent extends StatelessWidget {
   final String subtitle;
   final Function onClick;
 
-  ListItemComponent(this.title, this.subtitle, {@required this.onClick});
+  ListItemComponent(this.title, {this.subtitle, @required this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,14 @@ class ListItemComponent extends StatelessWidget {
                   TitleComponent(title),
                   Padding(
                     padding: const EdgeInsets.only(top: 16.0),
-                    child: Text(
-                      subtitle,
-                      style: TextStyle(
-                        fontSize: 14.0,
-                      ),
-                    ),
+                    child: subtitle != null
+                        ? Text(
+                            subtitle,
+                            style: TextStyle(
+                              fontSize: 14.0,
+                            ),
+                          )
+                        : null,
                   ),
                 ],
               ),
