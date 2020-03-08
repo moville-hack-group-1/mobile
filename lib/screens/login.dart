@@ -40,7 +40,7 @@ class Login extends StatelessWidget {
                   final String name = _nameController.text;
                   final String password = _passwordController.text;
                   if (name.isNotEmpty && password.isNotEmpty) {
-                    Navigator.of(context).push(
+                    Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: (context) => Welcome()));
 //                    _dao.save(newContact).then((id) => Navigator.pop(context));
                   } else {
