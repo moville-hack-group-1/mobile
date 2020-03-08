@@ -33,9 +33,8 @@ class ObjectiveList extends StatelessWidget {
                   'Ensino Geral',
                   subtitle: 'Exame para ingressar nas Universidades',
                   color: Colors.blue,
-                  onClick: () {
-                    openSelectedObjectiveInfo(context);
-                  },
+                  titleColor: Colors.grey[500],
+                  onClick: null,
                 ),
                 Divider(),
                 ListItemComponent(
