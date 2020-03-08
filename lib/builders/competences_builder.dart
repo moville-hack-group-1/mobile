@@ -53,7 +53,7 @@ class CompetencesBuilder {
 
     Competence competenceTwo = Competence('Ciências', topics, Colors.red);
     Competence competenceThree = Competence(
-        'Língua portuguesa, língua estrangeira moderna, educação básica e educação artística',
+        'Língua portuguesa',
         null,
         Colors.blue,
         titleColor: Colors.grey[500]);
