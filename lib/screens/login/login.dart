@@ -1,4 +1,5 @@
 import 'package:educanacao/components/toast.dart';
+import 'package:educanacao/screens/login/recover_login.dart';
 import 'package:educanacao/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,17 @@ class Login extends StatelessWidget {
                 },
               ),
             ),
-          )
+          ),
+          FlatButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => RecoverLogin()));
+            },
+            child: Text(
+              'Esqueci minha senha',
+              style: TextStyle(fontSize: 12.0),
+            ),
+          ),
         ]),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:educanacao/components/list_item.dart';
 import 'package:educanacao/components/title.dart';
+import 'package:educanacao/screens/content.dart';
 import 'package:flutter/material.dart';
 
 class Catch extends StatelessWidget {
@@ -34,7 +35,10 @@ class Catch extends StatelessWidget {
                 ListItemComponent(
                   '1. Compreender a ciência',
                   titleSize: 14.0,
-                  onClick: () {},
+                  onClick: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Content()));
+                  },
                 ),
                 Divider(),
                 ListItemComponent(
