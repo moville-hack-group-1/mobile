@@ -3,6 +3,11 @@ import 'package:educanacao/screens/level.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
+
+  final String userName;
+
+  Welcome(this.userName);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +17,7 @@ class Welcome extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(children: <Widget>[
-          TitleComponent('Oi Maria!\nEstamos felizes em te ver por aqui!'),
+          TitleComponent('Oi $userName!\nEstamos felizes em te ver por aqui!'),
           Padding(
             padding: const EdgeInsets.only(top: 32.0),
             child: Text(
