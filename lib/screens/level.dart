@@ -22,7 +22,7 @@ class Level extends StatelessWidget {
               children: <Widget>[
                 ListItemComponent(
                   'Ensino Fundamental',
-                  subtitle: '6 ao 9 ano',
+                  subtitle: '6º ao 9º ano',
                   color: Colors.green,
                   onClick: () {
                     Navigator.of(context).push(
@@ -32,7 +32,7 @@ class Level extends StatelessWidget {
                 Divider(),
                 ListItemComponent(
                   'Ensino Médio',
-                  subtitle: '1 ao 3 ano',
+                  subtitle: '1º ao 3º ano',
                   color: Colors.blue,
                   onClick: () {
                     Navigator.of(context).push(

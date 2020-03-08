@@ -38,8 +38,9 @@ class Catch extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
+                final Content content = _topic.contents[index];
                 return _CatchItem(
-                    _competenceName, _topic, _topic.contents[index]);
+                    _competenceName, content.title, _topic.color, content);
               },
               itemCount: _topic.contents.length,
             ),
@@ -52,16 +53,17 @@ class Catch extends StatelessWidget {
 
 class _CatchItem extends StatelessWidget {
   final String nameCompetence;
-  final Topic _topic;
+  final String _name;
+  final Color _color;
   final Content _content;
 
-  _CatchItem(this.nameCompetence, this._topic, this._content);
+  _CatchItem(this.nameCompetence, this._name, this._color, this._content);
 
   @override
   Widget build(BuildContext context) {
     return ListItemComponent(
-      _topic.name,
-      color: _topic.color,
+      _name,
+      color: _color,
       titleSize: 14.0,
       onClick: () {
         openCatchScreen(context, nameCompetence, _content);

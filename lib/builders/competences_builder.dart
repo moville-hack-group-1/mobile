@@ -19,14 +19,14 @@ class CompetencesBuilder {
     Content contentTwo = Content(
         'ConservaçÃo de alimentos.',
         'Ao ter que programar formas de economizar energia, muita gente tem dificuldades. O que excluir? DÃ¡ para ficar sem lÂmpadas? Sem TV? Ou sem geladeira, por exemplo? A geladeira é um bom exemplo de eletrodoméstico sem o qual é difÃ­cil imaginar o mundo hoje em dia.\n Prolongar a vida de um alimento nÃo é uma novidade. Os antigos caçadores, muitos séculos atrÁs, que salgavam e defumavam a carne de sua presa, jÁ estavam fazendo isso: perceberam que a carne, coberta de sal por algum tempo, tornava-se seca (desidratada), durando muito mais, o que também ocorria quando era exposta Ã&nbsp; fumaça e ao calor (defumada).',
-        '/images/step-1/step-2.png',
+        '/images/step-2/step-2.png',
         'Lorem Ipsum',
         '/audio/step-2/step-2.mp3',
         '/pdf/step-2/step-2.pdf');
     Content contentThree = Content(
         'Meios de transporte.',
         'A escolha de meios de transporte envolve, muitos fatores. Em cada situaçÃo, para cada objetivo, em cada regiÃo do paÃ­s e do mundo, é necessÁrio balancear as vantagens e devantagens de se fabricar, introduzir e utilizar um dado meio de transporte, analisando os muitos aspectos envolvidos: sociais, econÃ´micos, ambientais. Podemos nos perguntar, por exemplo, de que adiantam veÃ­culos capazes de desenvolver velocidades tÃo elevadas nas estradas e nas cidades, se o crescimento populacional, o crescimento urbano e a frota de veÃ­culos aumenta também tÃo rapidamente, causando congestionamentos â€œmonstrosâ€ e muitos acidentes, e lançando no ar que respiramos tantas substÂncias nocivas.',
-        '/images/step-1/step-3.png',
+        '/images/step-3/step-3.png',
         'Lorem Ipsum',
         '/audio/step-3/step-3.mp3',
         '/pdf/step-3/step-3.pdf');
