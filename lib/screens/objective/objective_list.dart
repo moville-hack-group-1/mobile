@@ -1,6 +1,6 @@
 import 'package:educanacao/components/list_item.dart';
 import 'package:educanacao/components/title.dart';
-import 'package:educanacao/screens/selected_objective_info.dart';
+import 'package:educanacao/screens/objective/selected_objective_info.dart';
 import 'package:flutter/material.dart';
 
 class ObjectiveList extends StatelessWidget {

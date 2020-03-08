@@ -1,5 +1,4 @@
 import 'package:educanacao/screens/login/login.dart';
-import 'package:educanacao/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {

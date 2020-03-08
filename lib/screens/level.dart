@@ -1,6 +1,6 @@
 import 'package:educanacao/components/list_item.dart';
 import 'package:educanacao/components/title.dart';
-import 'package:educanacao/screens/objective_list.dart';
+import 'package:educanacao/screens/objective/objective_list.dart';
 import 'package:flutter/material.dart';
 
 class Level extends StatelessWidget {
