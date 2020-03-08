@@ -5,4 +5,4 @@ import 'package:http_interceptor/http_interceptor.dart';
 final Client client =
 HttpClientWithInterceptor.build(interceptors: [LoggingInterceptor()]);
 
-const String BASE_URL = 'http://6edf432a.ngrok.io/app_dev.php/api/';
+const String TRILHA_URL = 'https://educanacao.pagekite.me/content/trilha.json';

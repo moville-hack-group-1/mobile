@@ -1,9 +1,15 @@
 import 'package:educanacao/components/list_item.dart';
 import 'package:educanacao/components/title.dart';
-import 'package:educanacao/screens/content.dart';
+import 'package:educanacao/models/trail.dart';
+import 'package:educanacao/screens/topic_detail.dart';
 import 'package:flutter/material.dart';
 
 class Catch extends StatelessWidget {
+  final String _competenceName;
+  final Topic _topic;
+
+  Catch(this._competenceName, this._topic);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +22,7 @@ class Catch extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
-                TitleComponent('Você escolheu Matemática e suas Tecnologias'),
+                TitleComponent('Você escolheu $_competenceName'),
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Text(
@@ -30,71 +36,42 @@ class Catch extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: ListView(
-              children: <Widget>[
-                ListItemComponent(
-                  '1. Compreender a ciência',
-                  titleSize: 14.0,
-                  color: Colors.red,
-                  onClick: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Content()));
-                  },
-                ),
-                Divider(),
-                ListItemComponent(
-                  '2. Compreender conhecimentos',
-                  color: Colors.red,
-                  titleSize: 14.0,
-                  onClick: () {},
-                ),
-                Divider(),
-                ListItemComponent(
-                  '3. Compreender a natureza',
-                  color: Colors.red,
-                  titleSize: 14.0,
-                  onClick: () {},
-                ),
-                Divider(),
-                ListItemComponent(
-                  '4. Compreender a saúde',
-                  color: Colors.red,
-                  titleSize: 14.0,
-                  onClick: () {},
-                ),
-                Divider(),
-                ListItemComponent(
-                  '5. Compreender o próprio corpo',
-                  color: Colors.red,
-                  titleSize: 14.0,
-                  onClick: () {},
-                ),
-                Divider(),
-                ListItemComponent(
-                  '6. Aplicar conhecimentos de ciência',
-                  color: Colors.red,
-                  titleSize: 14.0,
-                  onClick: () {},
-                ),
-                Divider(),
-                ListItemComponent(
-                  '7. Compreender o Sistema Solar',
-                  color: Colors.red,
-                  titleSize: 14.0,
-                  onClick: () {},
-                ),
-                Divider(),
-                ListItemComponent(
-                  '8. Avaliar a disponibilidade',
-                  color: Colors.red,
-                  titleSize: 14.0,
-                  onClick: () {},
-                ),
-              ],
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return _CatchItem(
+                    _competenceName, _topic, _topic.contents[index]);
+              },
+              itemCount: _topic.contents.length,
             ),
           ),
         ],
       ),
     );
+  }
+}
+
+class _CatchItem extends StatelessWidget {
+  final String nameCompetence;
+  final Topic _topic;
+  final Content _content;
+
+  _CatchItem(this.nameCompetence, this._topic, this._content);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListItemComponent(
+      _topic.name,
+      color: _topic.color,
+      titleSize: 14.0,
+      onClick: () {
+        openCatchScreen(context, nameCompetence, _content);
+      },
+    );
+  }
+
+  void openCatchScreen(
+      BuildContext context, String nameCompetence, Content content) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => TopicDetail(nameCompetence, content)));
   }
 }

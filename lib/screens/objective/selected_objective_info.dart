@@ -1,3 +1,4 @@
+import 'package:educanacao/builders/competences_builder.dart';
 import 'package:educanacao/components/list_item.dart';
 import 'package:educanacao/components/title.dart';
 import 'package:educanacao/screens/specific_list.dart';
@@ -21,7 +22,7 @@ class SelectedObjectiveInfo extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 32.0),
                   child: Text(
-                    'O Exame Nacional para Certificação de Competências de Jovens e Adultos (Encceja) é uma prova gratuita e voluntária servindo para conceder periodicamente "certificados de conclusão de ensino fundamental", e de "certificados de conclusão de ensino médio" para quem não teve oportunidade de concluir os estudos na idade escolar adequada para jovens e adultos residentes em liberdade no Brasil, no Exterior e para detentos.',
+                    'O Exame Nacional para Certificação de Competências de Jovens e Adultos (Encceja) é uma prova gratuita e voluntária servindo para conceder periodicamente "certificados de conclusão de ensino fundamental", e de "certificados de conclusão de ensino médio" para quem não teve oportunidade de concluir os estudos na idade escolar adequada para jovens e adultos residentes em liberdade no Brasil, no Exterior e para detentos.\n\nA idade ideal é 15 anos ou mais até a data da realização das provas para o ensino fundamental, e ter 18 anos ou mais até a data da realização da prova para o ensino médio.',
                     style: TextStyle(
                       fontSize: 14.0,
                     ),
@@ -29,7 +30,9 @@ class SelectedObjectiveInfo extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 32.0),
-                  child: TitleComponent('Você escolheu ENCCEJA', size: 20.0),
+                  child: TitleComponent(
+                      'O exame é dividido em 2 partes, escolha a sua opção:',
+                      size: 20.0),
                 ),
               ],
             ),
@@ -65,7 +68,8 @@ class SelectedObjectiveInfo extends StatelessWidget {
   }
 
   void openSpecificList(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => SpecificList()));
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) =>
+            SpecificList(CompetencesBuilder.getCompetences())));
   }
 }

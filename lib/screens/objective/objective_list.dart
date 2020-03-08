@@ -41,6 +41,8 @@ class ObjectiveList extends StatelessWidget {
                 ListItemComponent(
                   'ENEM',
                   subtitle: 'Exame para ingressar nas Universidades',
+                  color: Colors.red,
+                  titleColor: Colors.grey[500],
                   onClick: null,
                 ),
               ],
