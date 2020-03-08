@@ -8,12 +8,18 @@ void main() {
   final UserDAO _userDAO = UserDAO();
   _userDAO.findAll().then((users) {
     runApp(new MaterialApp(
-      home: users.isEmpty ? EducaNacaoApp() : Welcome(users.first.name),
+      home: users.isEmpty
+          ? EducaNacaoApp(Login())
+          : EducaNacaoApp(Welcome(users.first.name)),
     ));
   });
 }
 
 class EducaNacaoApp extends StatelessWidget {
+  final Widget _widgetToStart;
+
+  EducaNacaoApp(this._widgetToStart);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +30,7 @@ class EducaNacaoApp extends StatelessWidget {
             buttonColor: Colors.blueAccent[700],
             textTheme: ButtonTextTheme.primary,
           )),
-      home: Login(),
+      home: _widgetToStart,
     );
   }
 }

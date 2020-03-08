@@ -23,6 +23,7 @@ class Level extends StatelessWidget {
                 ListItemComponent(
                   'Ensino Fundamental',
                   subtitle: '6 ao 9 ano',
+                  color: Colors.green,
                   onClick: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ObjectiveList()));
@@ -32,6 +33,7 @@ class Level extends StatelessWidget {
                 ListItemComponent(
                   'Ensino Médio',
                   subtitle: '1 ao 3 ano',
+                  color: Colors.blue,
                   onClick: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ObjectiveList()));

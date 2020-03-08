@@ -39,7 +39,9 @@ class SelectedObjectiveInfo extends StatelessWidget {
               children: <Widget>[
                 ListItemComponent(
                   'Declaração Parcial de Proficiência',
-                  subtitle: 'Para o participante que conseguir a nota mínima exigida em uma das quatro provas, ou em mais de uma, mas não em todas elas.',
+                  subtitle:
+                      'Para o participante que conseguir a nota mínima exigida em uma das quatro provas, ou em mais de uma, mas não em todas elas.',
+                  color: Colors.green,
                   onClick: () {
                     openSpecificList(context);
                   },
@@ -47,7 +49,9 @@ class SelectedObjectiveInfo extends StatelessWidget {
                 Divider(),
                 ListItemComponent(
                   'Certificação de Conclusão',
-                  subtitle: 'Para o participante que conseguir a nota mínima exigida nas quatro provas objetivas e na redação.',
+                  subtitle:
+                      'Para o participante que conseguir a nota mínima exigida nas quatro provas objetivas e na redação.',
+                  color: Colors.blue,
                   onClick: () {
                     openSpecificList(context);
                   },

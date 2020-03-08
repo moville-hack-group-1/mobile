@@ -13,6 +13,7 @@ class SpecificList extends StatelessWidget {
         children: <Widget>[
           ListItemComponent(
             'Linguagens, Códigos e suas Tecnologias',
+            color: Colors.green,
             onClick: () {
               openCatchScreen(context);
             },
@@ -20,6 +21,7 @@ class SpecificList extends StatelessWidget {
           Divider(),
           ListItemComponent(
             'Matemática e suas Tecnologias',
+            color: Colors.red,
             onClick: () {
               openCatchScreen(context);
             },
@@ -27,6 +29,7 @@ class SpecificList extends StatelessWidget {
           Divider(),
           ListItemComponent(
             'Ciências Humanas e suas Tecnologias',
+            color: Colors.blue,
             onClick: () {
               openCatchScreen(context);
             },
@@ -34,6 +37,7 @@ class SpecificList extends StatelessWidget {
           Divider(),
           ListItemComponent(
             'Ciências da Natureza e suas Tecnologias',
+            color: Colors.yellow,
             onClick: () {
               openCatchScreen(context);
             },

@@ -35,6 +35,7 @@ class Catch extends StatelessWidget {
                 ListItemComponent(
                   '1. Compreender a ciência',
                   titleSize: 14.0,
+                  color: Colors.red,
                   onClick: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => Content()));
@@ -43,42 +44,49 @@ class Catch extends StatelessWidget {
                 Divider(),
                 ListItemComponent(
                   '2. Compreender conhecimentos',
+                  color: Colors.red,
                   titleSize: 14.0,
                   onClick: () {},
                 ),
                 Divider(),
                 ListItemComponent(
                   '3. Compreender a natureza',
+                  color: Colors.red,
                   titleSize: 14.0,
                   onClick: () {},
                 ),
                 Divider(),
                 ListItemComponent(
                   '4. Compreender a saúde',
+                  color: Colors.red,
                   titleSize: 14.0,
                   onClick: () {},
                 ),
                 Divider(),
                 ListItemComponent(
                   '5. Compreender o próprio corpo',
+                  color: Colors.red,
                   titleSize: 14.0,
                   onClick: () {},
                 ),
                 Divider(),
                 ListItemComponent(
                   '6. Aplicar conhecimentos de ciência',
+                  color: Colors.red,
                   titleSize: 14.0,
                   onClick: () {},
                 ),
                 Divider(),
                 ListItemComponent(
                   '7. Compreender o Sistema Solar',
+                  color: Colors.red,
                   titleSize: 14.0,
                   onClick: () {},
                 ),
                 Divider(),
                 ListItemComponent(
                   '8. Avaliar a disponibilidade',
+                  color: Colors.red,
                   titleSize: 14.0,
                   onClick: () {},
                 ),

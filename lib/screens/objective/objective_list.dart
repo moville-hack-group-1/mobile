@@ -23,6 +23,7 @@ class ObjectiveList extends StatelessWidget {
                 ListItemComponent(
                   'ENCCEJA',
                   subtitle: 'Exame para jovens e adultos',
+                  color: Colors.green,
                   onClick: () {
                     openSelectedObjectiveInfo(context);
                   },
@@ -31,6 +32,7 @@ class ObjectiveList extends StatelessWidget {
                 ListItemComponent(
                   'Ensino Geral',
                   subtitle: 'Exame para ingressar nas Universidades',
+                  color: Colors.blue,
                   onClick: () {
                     openSelectedObjectiveInfo(context);
                   },
@@ -39,9 +41,7 @@ class ObjectiveList extends StatelessWidget {
                 ListItemComponent(
                   'ENEM',
                   subtitle: 'Exame para ingressar nas Universidades',
-                  onClick: () {
-                    openSelectedObjectiveInfo(context);
-                  },
+                  onClick: null,
                 ),
               ],
             ),

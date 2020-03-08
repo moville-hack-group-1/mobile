@@ -5,42 +5,64 @@ class ListItemComponent extends StatelessWidget {
   final String title;
   final String subtitle;
   final double titleSize;
+  final Color color;
+
   final Function onClick;
 
   ListItemComponent(this.title,
-      {this.subtitle, this.titleSize, @required this.onClick});
+      {this.subtitle, this.titleSize, this.color, @required this.onClick});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        onClick();
+        if (onClick != null) onClick();
       },
-      child: Padding(
-        padding: const EdgeInsets.all(24.0),
+      child: Container(
+        color: Colors.grey[200],
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
                 children: <Widget>[
-                  TitleComponent(title, size: titleSize),
+                  Container(
+                    height: 100.0,
+                    color: color != null ? color : null,
+                    child: new Text(
+                      " ",
+                      style: new TextStyle(color: Colors.white),
+                    ),
+                  ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 16.0),
-                    child: subtitle != null
-                        ? Text(
-                            subtitle,
-                            style: TextStyle(
-                              fontSize: 14.0,
-                            ),
-                          )
-                        : null,
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        TitleComponent(title, size: titleSize),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 16.0),
+                          child: subtitle != null
+                              ? Text(
+                                  subtitle,
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                  ),
+                                )
+                              : null,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-            Image.asset('images/ic_arrow.png')
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'images/ic_arrow.png',
+                color: color,
+              ),
+            )
           ],
         ),
       ),
