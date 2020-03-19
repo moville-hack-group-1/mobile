@@ -1,5 +1,9 @@
-## EDUCA **N**AÇÃO APP MOBILE
+# EDUCA **N**AÇÃO APP MOBILE
 
-Download do apk
+## Aplicação Android e iOS
+
+![android](./qr-code/android.gif)
+
+## Download do apk
 
 ![download-apk](./qr-code/educa-nacao-app-qrcode.png)
