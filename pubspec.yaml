@@ -56,6 +56,10 @@ flutter:
     - images/logo.png
     - images/loading.gif
     - images/background.jpeg
+    - images/topic/step-1.jpg
+    - images/topic/step-2.jpg
+    - images/topic/step-3.png
+    - images/topic/step-4.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

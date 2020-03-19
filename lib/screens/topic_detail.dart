@@ -46,10 +46,9 @@ class TopicDetail extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: FadeInImage.assetNetwork(
+                        child: Image.asset(
+                          _content.image,
                           height: 200.0,
-                          placeholder: 'images/loading.gif',
-                          image: FILE_URL + _content.image,
                         ),
                       ),
                       Padding(
